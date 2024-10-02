@@ -11,12 +11,12 @@ import IMG from '@/assets/images/hero.jpg';
 const Spinner = () => {
   const words = ['Foundation', 'Culture', 'History', 'Purpose'];
   return (
-    <div className='mt-40 text-2xl mx-auto w-fit xl:text-7xl md:text-5xl inline p-4 rounded-md transition-all duration-500 ease-in-out hover:scale-125'>
-      <div className='w-full mx-auto'>
-        <h2 className='text-aubergine-500 font-branding float-left drop-shadow-md text-white'>
+    <div className='lg:mt-40 mt-10 text-3xl xl:text-7xl md:text-5xl p-4 rounded-md transition-all duration-500 ease-in-out'>
+      <div className='w-full flex flex-col justify-center items-center'>
+        <h2 className='text-aubergine-500 font-branding drop-shadow-md text-white whitespace-nowrap text-center'>
           The artform of locking
         </h2>
-        <div className='pl-3 sticky float-left w-fit drop-shadow-md'>
+        <div className='pl-3 sticky drop-shadow-md'>
           <WordSpinner words={words} />
         </div>
       </div>
@@ -72,20 +72,20 @@ const Hero = () => {
           alt='funkcamp'
           src={IMG}
           fill
-          className='object-cover object-center rounded-lg'
+          className='object-cover object-center rounded-lg pointer-events-none'
         />
       </div>
       {/* when pushing play this part under should be opacity 0 fix */}
       {/*  {contentVisible && ( */}
       <div
-        className={`absolute w-full h-full top-0 left-0 z-50 grid place-content-center py-20 transition-opacity duration-500 pointer-events-none`}
+        className={`w-full h-full z-50 grid place-content-center py-20 transition-opacity duration-500 pointer-events-none`}
       >
         <motion.h1
           variants={fadeIn}
           initial='initial'
           animate='enter'
           exit='exit'
-          className={`sm:absolute sm:top-15 sm:left-8 lg:text-center top-20 lg:w-full text-2xl md:text-5xl lg:text-7xl z-10 text-white mt-20 mb-8 font-branding p-4 rounded-md duration-500 pointer-events-none`}
+          className={`text-center pt-20 lg:top-20 lg:w-full text-2xl md:text-5xl lg:text-7xl z-10 text-white lg:mt-20 mt-6 mb-4 font-branding p-4 rounded-md duration-500 pointer-events-none`}
         >
           Funkcamp 2025 - 20 years Anniversary
         </motion.h1>
