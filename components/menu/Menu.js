@@ -1,10 +1,11 @@
 'use client';
-import { Darker_Grotesque, Bebas_Neue } from 'next/font/google';
+import { usePathname } from 'next/navigation'; // Import the correct hook
+import { Darker_Grotesque } from 'next/font/google';
 import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
-import './menu.css';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
+import './menu.css';
 
 const menuLinks = [
   { path: '/', label: 'Home' },
@@ -23,6 +24,7 @@ const darkerGrotesque = Darker_Grotesque({
 const Menu = () => {
   const container = useRef();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname(); // Use pathname to detect route changes
 
   /*GSAP*/
   const tl = useRef();
@@ -61,34 +63,10 @@ const Menu = () => {
     }
   }, [isMenuOpen]);
 
+  // Close the menu when route changes
   useEffect(() => {
-    // Select all the link items
-    const links = document.querySelectorAll('.menu-link-item-holder');
-
-    links.forEach((link) => {
-      const letters = link.querySelectorAll('.menu-letter');
-
-      // Add hover effect for each link
-      link.addEventListener('mouseenter', () => {
-        gsap.to(letters, {
-          rotateY: 360,
-          duration: 1,
-          stagger: 0.05,
-          ease: 'power1.out',
-        });
-      });
-
-      link.addEventListener('mouseleave', () => {
-        // Reset the letters' rotation after hover
-        gsap.to(letters, {
-          rotateY: 0,
-          duration: 0.5,
-          stagger: 0.05,
-          ease: 'power1.out',
-        });
-      });
-    });
-  }, []);
+    setIsMenuOpen(false); // Close the menu on route change
+  }, [pathname]);
 
   return (
     <div className='menu-container' ref={container}>
