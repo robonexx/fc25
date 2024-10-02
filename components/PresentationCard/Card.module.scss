@@ -1,0 +1,104 @@
+
+.cardWrapper {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 3.125rem;
+  }
+  
+  .cardWrapper > div {
+    width: 53.125rem;
+    height: 20rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 3.125rem;
+
+    .overlay {
+      position: absolute;
+      z-index: 10;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.157);
+    }
+
+     > img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+ .cardWrapper > .png {
+      position: absolute;
+       bottom: 0;
+       left: auto;
+       right: 0;
+       width: 360px;
+       height: auto;
+  
+       > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+       }
+    }
+  
+  .cardInfo {
+    margin: 1rem 0 3.5rem 4rem;
+    padding: 1rem;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+  }
+  
+  .cardWrapper  .cardInfo > div {
+    max-width: 100%;
+  }
+  
+  .cardWrapper .cardYear {
+    padding: 0.5rem 0.5rem;
+    width: fit-content;
+    position: relative;
+    font-size: 0.7rem;
+    font-weight: 700;
+    background: linear-gradient(to top left, #2caee12c, #ffffff4a);
+    border-radius: 6px;
+  }
+  
+  .cardWrapper .cardTitle {
+    height: 3rem;
+    margin: 0.5rem 0 1rem;
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-align: left;
+    line-height: 1.25;
+    color: #fff;
+  }
+  
+ .cardWrapper .desc {
+    position: relative;
+    height: fit-content;
+    width: 60%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;  
+}
+
+.desc:hover {
+    overflow: auto;
+    -webkit-line-clamp: unset;
+}
+
+.desc::-webkit-scrollbar {
+    display: none; 
+}

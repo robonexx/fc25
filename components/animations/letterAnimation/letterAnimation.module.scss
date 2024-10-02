@@ -1,0 +1,16 @@
+.reveal {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.textSplit {
+  padding: 0rem 0.2rem;
+  display: inline-block;
+  span {
+    font-size: 2rem;
+    color: white;
+    filter: drop-shadow(2px 2px 5px rgba(0,0,0,.455));
+    font-weight: 400;
+  }
+}

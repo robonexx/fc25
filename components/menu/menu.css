@@ -1,0 +1,137 @@
+.menu-bar,
+.menu-overlay,
+.menu-overlay-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  padding: 2em;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-logo {
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  border: 1px solid #ffffff;
+  cursor: pointer;
+}
+
+.menu-logo:hover {
+  transition: all 0.3s ease-in-out;
+  background: #ffffff;
+}
+
+.menu-logo:hover a {
+  color: black;
+}
+
+.menu-bar a,
+.menu-open p {
+  color: #e5e4e5;
+  cursor: pointer;
+}
+
+.menu-open p {
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  border: 1px solid #888;
+}
+
+.menu-open p:hover {
+  color: #000000;
+  background: #ffffff;
+}
+
+.menu-overlay-bar a,
+.menu-info-col a,
+.menu-close p {
+  color: #000;
+  cursor: pointer;
+}
+
+.menu-close p {
+  padding: 2em;
+  border: 1px solid #000000;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+}
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #ef6a17;
+  z-index: 2;
+  display: flex;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+}
+
+.menu-close-icon {
+  flex: 2;
+  display: flex;
+  align-items: flex-end;
+  cursor: pointer;
+}
+
+.menu-copy {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 2em;
+}
+
+.menu-close-icon p {
+  font-size: 100px;
+  -webkit-text-stroke: 3px #ef6a17;
+  line-height: 70%;
+}
+
+.menu-link-item {
+  width: max-content;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.menu-link-item-holder {
+  position: relative;
+}
+
+.menu-link-item-holder a {
+  color: #000;
+  font-size: clamp(50px, 5vw + 1rem, 120px);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 85%;
+}
+
+.menu-letter {
+  display: inline-block;
+  transition: transform 0.5s ease;
+  transform-origin: center;
+}
+
+.menu-info {
+  display: flex;
+}
+
+.menu-info-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+@media (max-width: 900px) {
+  .menu-close-icon {
+    display: none;
+  }
+  .menu-copy {
+    padding-top: 8em;
+  }
+  .menu-link-item-holder a {
+  }
+}

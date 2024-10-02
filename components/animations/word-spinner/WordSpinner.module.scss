@@ -1,0 +1,95 @@
+.wrapper {
+  display: flex;
+  height: 3.5rem;
+  margin: 4rem 0 2rem;
+  width: 100%;
+}
+
+.wrapper h2,
+.words h2 {
+  font-size: 1.75rem;
+  height: 3rem;
+  text-shadow: 2px 4px 4px rgba(0,0,0,0.2),
+  0px -5px 10px rgba(255,255,255,0.15);
+}
+
+.words {
+  height:3rem;
+}
+  
+  .words {
+    overflow: hidden;
+  }
+  
+  .words h2 {
+    animation: spin_words 10s infinite;
+    height: 130%;
+    padding-left: 1rem;
+  }
+  
+  @keyframes spin_words {
+    10% {
+      transform: translateY(-12%);
+    }
+    25% {
+      transform: translateY(-00%);
+    }
+    35% {
+      transform: translateY(-112%);
+    }
+    50% {
+      transform: translateY(-100%);
+    }
+    60% {
+      transform: translateY(-212%);
+    }
+    75% {
+      transform: translateY(-200%);
+    }
+    85% {
+      transform: translateY(-312%);
+    }
+    100% {
+      transform: translateY(-300%);
+    }
+  }
+  
+  @media only screen and (min-width: 600px) {
+    .wrapper {
+      height: 3.5rem;
+      margin-bottom: 4rem;
+      width: 100%;
+    }
+  
+    .wrapper h2,
+    .words h2 {
+      font-size: 1.75rem;
+      height: 3rem;
+    }
+  
+    .words {
+      height:3rem;
+    }
+  }
+    
+  
+  @media (min-width: 1024px) {
+    .wrapper {
+      height: 5.5rem;
+      padding-left: 12.5rem;
+      padding-right: 12.5rem;
+
+    }
+
+    .wrapper h2,
+    .words h2 {
+      font-size: 3rem;
+      height: 8ch;
+
+     
+    }
+  
+    .words {
+      height: 5rem;
+    }
+  }
