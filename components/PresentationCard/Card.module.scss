@@ -10,12 +10,17 @@
   }
   
   .cardWrapper > div {
-    width: clamp(300px, 80%, 850px); /* Adjust the values as needed */
+    width: 100%;
   height: clamp(200px, 50vh, 320px);
     position: absolute;
     left: 0;
     top: 0;
     border-radius: 3.125rem;
+    padding: 0 0 0 3rem;
+
+    @media (max-width: 768px) {
+      padding: 0 0 0 1rem;
+    }
 
     .overlay {
       position: absolute;
@@ -35,7 +40,7 @@
        bottom: 0;
        left: auto;
        right: 0;
-       width: clamp(240px, 80%, 360px);
+       width: clamp(140px, 80%, 360px);
        height: auto;
   
        > img {
@@ -45,8 +50,7 @@
        }
     }
   
-  .cardInfo {
-    margin: 1rem 0 3.5rem 4rem;
+  .cardInfo {   
     padding: 1rem;
     width: 50%;
     height: 100%;
@@ -78,28 +82,36 @@
   
   .cardWrapper .cardTitle {
     height: 3rem;
-    margin: 0.5rem 0 1rem;
-    font-size: 2.5rem;
+    padding: 0.5rem 0 1rem;
+    font-size: clamp(1.5rem, 2vw + 1rem, 2.5rem);
     font-weight: 600;
     text-align: left;
     line-height: 1.25;
     color: #fff;
+
+    @media (max-width: 768px) {
+      padding-top: 2rem;
+    }
   }
   
  .cardWrapper .desc {
     position: relative;
     height: fit-content;
-    width: 60%;
+    width: 80%;
+    height: 100px;
+    font-size: clamp(1rem, 1vw, 2rem);
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;  
+    cursor: pointer;
 }
 
 .desc:hover {
     overflow: auto;
     -webkit-line-clamp: unset;
+    cursor: ns-resize;
 }
 
 .desc::-webkit-scrollbar {
