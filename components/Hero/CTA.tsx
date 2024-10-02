@@ -7,9 +7,12 @@ const HighlightItem: React.FC<{
   path: string;
 }> = ({ title, content, path }) => {
   return (
-    <Link href={path} className='py-4 px-8 border-[1px] border-x-transparent border-y-[#888] hover:bg-white hover:text-black transition-all duration-300'>
-      <span className='text-xl font-bold'>{title}</span>
-      <p>{content}</p>
+    <Link
+      href={path}
+      className='py-4 px-8 border-[1px] border-x-transparent border-y-[#888] hover:bg-white hover:text-black transition-all duration-300'
+    >
+      <span className='text-xl font-bold  text-white'>{title}</span>
+      <p className='text-xl font-bold text-gray-400'>{content}</p>
     </Link>
   );
 };
@@ -22,16 +25,8 @@ const CTA = () => {
         content='The full experience'
         path='camp2025'
       />
-      <HighlightItem
-        title='Media'
-        content='Photos, videos'
-        path='media'
-      />
-      <HighlightItem
-        title='Contact'
-        content='Contact Us'
-        path='contact'
-      />
+      <HighlightItem title='Media' content='Photos, videos' path='media' />
+      <HighlightItem title='Contact' content='Contact Us' path='contact' />
     </div>
   );
 };

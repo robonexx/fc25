@@ -4,13 +4,14 @@ import { motion } from 'framer-motion';
 import { fadeIn } from '@/components/animations/Animations';
 import CTA from './CTA';
 import WordSpinner from '../WordSpinner';
+import videoSrc from '../../assets/videos/club.mp4';
 
 const Spinner = () => {
   const words = ['Foundation', 'Culture', 'History', 'Purpose'];
   return (
     <div className='text-2xl mx-auto w-fit xl:text-7xl md:text-5xl inline p-4 rounded-md transition-all duration-500 ease-in-out hover:scale-125'>
-      <div className='w-[360px] xl:w-[1150px] mx-auto'>
-        <h2 className='text-aubergine-500 font-branding float-left drop-shadow-md'>
+      <div className='w-full mx-auto'>
+        <h2 className='text-aubergine-500 font-branding float-left drop-shadow-md text-white'>
           The artform of locking
         </h2>
         <div className='pl-3 sticky float-left w-fit drop-shadow-md'>
@@ -63,9 +64,8 @@ const Hero = () => {
           autoPlay
           loop
           controls
-        >
-          <source src='@/assets/videos/club2015.mp4' type='video/mp4' />
-        </video>
+          src={videoSrc}
+        ></video>
       </div>
       {/* when pushing play this part under should be opacity 0 fix */}
       {contentVisible && (
@@ -77,14 +77,10 @@ const Hero = () => {
             initial='initial'
             animate='enter'
             exit='exit'
-            className={`h-fit w-fit mx-auto text-3xl md:text-5xl lg:text-7xl text-center z-10 text-white mt-20 mb-8 relative font-branding  p-4 rounded-md transition-opacity duration-500 pointer-events-none `}
+            className={`sm:absolute sm:top-8 sm:left-8 lg:text-center lg:w-full text-2xl md:text-5xl lg:text-7xl z-10 text-white mt-20 mb-8 font-branding p-4 rounded-md duration-500 pointer-events-none`}
           >
             Funkcamp 2025 - 20 years Anniversary
           </motion.h1>
-          <span className='text-xl px-2 drop-shadow-md transition-opacity duration-500 pointer-events-none'>
-            (since 2005)
-          </span>
-          {/*  <WordSpinner /> */}
           <Spinner />
           <motion.p
             initial={{ y: -100, opacity: 0 }}
@@ -107,10 +103,10 @@ const Hero = () => {
       )}
       {!contentVisible && (
         <>
-          <div className='absolute top-16 left-8 text-2xl font-semibold font-branding  drop-shadow-xl transition-opacity duration-500 pointer-events-none'>
+          <div className='absolute top-16 left-8 text-xl font-branding  drop-shadow-xl transition-opacity duration-500 pointer-events-none text-gray-500'>
             <h2>Royal Nelson Orchesta at Fasching</h2>
           </div>
-          <div className='absolute bottom-20 right-8 text-2xl font-semibold font-branding  drop-shadow-xl transition-opacity duration-500 pointer-events-none'>
+          <div className='absolute bottom-20 right-8 text-2xl font-semibold font-branding  drop-shadow-xl transition-opacity duration-500 pointer-events-none text-gray-400'>
             <h2>The Gogo Brothers & Willow</h2>
           </div>
         </>

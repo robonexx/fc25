@@ -20,7 +20,7 @@ const Section = ({ image, title, desc, tag }: SectionProps) => {
   const y = useTransform(scrollYProgress, [0, 1], ['-20%', '10%']);
   return (
     <section
-      className='relative h-screen overflow-hidden border-solid border-[80px] border-black'
+      className='relative h-screen overflow-hidden border-solid border-[80px] border-black sm:border-[20px]'
       ref={secRef}
     >
       <motion.div className='absolute h-[120%] w-full -z-10' style={{ top: y }}>
@@ -32,10 +32,16 @@ const Section = ({ image, title, desc, tag }: SectionProps) => {
           className='object-cover object-center rounded-lg'
         />
       </motion.div>
-      <div className='flex flex-col gap-4 p-24 mt-20 max-w-fit'>
-        <span className='uppercase text-xs drop-shadow-xl'>{tag}</span>
-        <h2 className='font-branding text-4xl drop-shadow-xl'>{title}</h2>
-        <p className='font-primary max-w-[50ch] drop-shadow-xl'>{desc}</p>
+      <div className='flex flex-col gap-4 p-24 mt-20 max-w-fit text-white sm:p-8'>
+        <span className='uppercase text-xs drop-shadow-xl text-white'>
+          {tag}
+        </span>
+        <h2 className='font-branding text-4xl drop-shadow-xl text-white'>
+          {title}
+        </h2>
+        <p className='font-primary max-w-[50ch] drop-shadow-xl text-white'>
+          {desc}
+        </p>
       </div>
     </section>
   );

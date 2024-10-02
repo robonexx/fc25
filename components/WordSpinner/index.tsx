@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -18,7 +18,7 @@ const WordSpinner: React.FC<WordSpinnerProps> = ({ words }) => {
   }, [words]);
 
   return (
-    <div className='w-full h-full'>
+    <div className='w-[300px] h-full text-left'>
       <AnimatePresence mode='wait'>
         <motion.div
           key={currentIndex}
