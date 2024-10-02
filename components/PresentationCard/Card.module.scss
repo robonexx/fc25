@@ -10,8 +10,8 @@
   }
   
   .cardWrapper > div {
-    width: 53.125rem;
-    height: 20rem;
+    width: clamp(300px, 80%, 850px); /* Adjust the values as needed */
+  height: clamp(200px, 50vh, 320px);
     position: absolute;
     left: 0;
     top: 0;
@@ -35,7 +35,7 @@
        bottom: 0;
        left: auto;
        right: 0;
-       width: 360px;
+       width: clamp(240px, 80%, 360px);
        height: auto;
   
        > img {
@@ -57,6 +57,7 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-evenly;
+    color: #b0b0b0;
   }
   
   .cardWrapper  .cardInfo > div {
@@ -68,9 +69,11 @@
     width: fit-content;
     position: relative;
     font-size: 0.7rem;
-    font-weight: 700;
+    font-weight: 400;
     background: linear-gradient(to top left, #2caee12c, #ffffff4a);
     border-radius: 6px;
+    color: white;
+    letter-spacing: 1px;
   }
   
   .cardWrapper .cardTitle {

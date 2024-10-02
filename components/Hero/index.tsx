@@ -9,7 +9,7 @@ import videoSrc from '../../assets/videos/club.mp4';
 const Spinner = () => {
   const words = ['Foundation', 'Culture', 'History', 'Purpose'];
   return (
-    <div className='text-2xl mx-auto w-fit xl:text-7xl md:text-5xl inline p-4 rounded-md transition-all duration-500 ease-in-out hover:scale-125'>
+    <div className='mt-40 text-2xl mx-auto w-fit xl:text-7xl md:text-5xl inline p-4 rounded-md transition-all duration-500 ease-in-out hover:scale-125'>
       <div className='w-full mx-auto'>
         <h2 className='text-aubergine-500 font-branding float-left drop-shadow-md text-white'>
           The artform of locking
@@ -77,7 +77,7 @@ const Hero = () => {
             initial='initial'
             animate='enter'
             exit='exit'
-            className={`sm:absolute sm:top-8 sm:left-8 lg:text-center lg:w-full text-2xl md:text-5xl lg:text-7xl z-10 text-white mt-20 mb-8 font-branding p-4 rounded-md duration-500 pointer-events-none`}
+            className={`sm:absolute sm:top-15 sm:left-8 lg:text-center top-20 lg:w-full text-2xl md:text-5xl lg:text-7xl z-10 text-white mt-20 mb-8 font-branding p-4 rounded-md duration-500 pointer-events-none`}
           >
             Funkcamp 2025 - 20 years Anniversary
           </motion.h1>
@@ -86,7 +86,7 @@ const Hero = () => {
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.4, delay: 0.5 }}
-            className='w-fit mx-auto max-h-fit text-sm md:text-xl text-center leading-loose text-slate-200 drop-shadow-xl z-10 px-8 relative mt-2 font-primary p-4 rounded-md transition-opacity duration-500 pointer-events-none'
+            className='w-full mx-auto max-h-fit text-sm md:text-xl text-center leading-loose text-slate-200 drop-shadow-xl z-10 px-8 relative mt-2 font-primary p-4 rounded-md transition-opacity duration-500 pointer-events-none'
           >
             Swedens first locking camp, bringing the pioneers to share with the
             locking community
@@ -103,7 +103,7 @@ const Hero = () => {
       )}
       {!contentVisible && (
         <>
-          <div className='absolute top-16 left-8 text-xl font-branding  drop-shadow-xl transition-opacity duration-500 pointer-events-none text-gray-500'>
+          <div className='absolute top-32 left-8 text-xl font-branding  drop-shadow-xl transition-opacity duration-500 pointer-events-none text-gray-500'>
             <h2>Royal Nelson Orchesta at Fasching</h2>
           </div>
           <div className='absolute bottom-20 right-8 text-2xl font-semibold font-branding  drop-shadow-xl transition-opacity duration-500 pointer-events-none text-gray-400'>

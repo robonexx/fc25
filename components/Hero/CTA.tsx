@@ -9,10 +9,12 @@ const HighlightItem: React.FC<{
   return (
     <Link
       href={path}
-      className='py-4 px-8 border-[1px] border-x-transparent border-y-[#888] hover:bg-white hover:text-black transition-all duration-300'
+      className='py-4 px-8 border-[1px] border-x-transparent border-y-[#888] hover:bg-white hover:text-black text-white transition-all duration-300'
     >
-      <span className='text-xl font-bold  text-white'>{title}</span>
-      <p className='text-xl font-bold text-gray-400'>{content}</p>
+      <span className='text-xl font-bold'>{title}</span>
+      <p className='text-xl font-bold text-gray-500 hover:text-inherit'>
+        {content}
+      </p>
     </Link>
   );
 };
