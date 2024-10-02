@@ -72,7 +72,7 @@ const Hero = () => {
           alt='funkcamp'
           src={IMG}
           fill
-          className='object-cover object-center rounded-lg pointer-events-none'
+          className='object-cover object-center rounded-lg pointer-events-none max-h-screen'
         />
       </div>
       {/* when pushing play this part under should be opacity 0 fix */}
