@@ -20,11 +20,11 @@ const Section = ({ image, title, desc, tag }: SectionProps) => {
   const y = useTransform(scrollYProgress, [0, 1], ['-20%', '10%']);
   return (
     <section
-      className='relative h-screen overflow-hidden border-solid lg:border-[80px] border-black border-[16px]'
+      className='relative h-screen overflow-hidden border-solid lg:border-[80px] border-transparent border-[16px]'
       ref={secRef}
     >
       <motion.div className='absolute h-[120%] w-full -z-10' style={{ top: y }}>
-        <div className='absolute inset-0 bg-black/30 z-10'></div>
+        <div className='absolute inset-0 bg-transparent z-10'></div>
         <Image
           alt={title}
           src={image}
