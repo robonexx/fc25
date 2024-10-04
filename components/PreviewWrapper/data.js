@@ -27,8 +27,8 @@ export const previews = [
   {
     img: '/devteam/2.jpg',
     title: 'Damon Frost',
-    tags: 'Locking Innovator',
-    desc: 'Damon Frost has been influential in the European hip-hop and locking scenes. Based in Sweden, he has a unique style that combines classic locking with his creative vision, making him a prominent mentor, performer, and competitor on international stages.',
+    tags: 'Popping Innovator',
+    desc: 'Damon Frost has been influential in the European hip-hop, funk popping scenes, he was also an huge inspiration in the locking scene in late 80s early 90s. Based in Sweden, originated from the US, he has a unique style that combines classic funk styles with his creative vision, making him a prominent mentor, performer, and competitor on international stages.',
   },
   {
     img: '/devteam/3.jpg',

@@ -21,7 +21,7 @@ const HighlightItem: React.FC<{
 
 const CTA = () => {
   return (
-    <div className='flex justify-between lg:w-3/5 lg:max-w-[900px] mx-auto mt-32 gap-10 md:gap-20'>
+    <div className='flex justify-between lg:w-3/5 lg:max-w-[900px] mx-auto mt-24 gap-10 md:gap-20 pb-20'>
       <HighlightItem
         title='Camp 2025'
         content='The full experience'

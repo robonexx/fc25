@@ -37,7 +37,7 @@
   font-weight: lighter;
   background-color: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 40px;
+  border-radius: 25px;
   backdrop-filter: blur(20px);
   transition: 0.3s;
 }
@@ -66,12 +66,12 @@
 
 .preview-title h1 {
   font-weight: lighter;
-  font-size: 64px;
+  font-size: clamp(2rem, 4vw + 1rem, 4rem);
 }
 
 .preview-tags p,
 .preview-desc p {
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 120%;
 }
 
@@ -264,7 +264,8 @@
   .preview.variant-3 .preview-img,
   .preview.variant-4 .preview-img {
     position: static;
-    height: fit-content;
+    height: 280px;
+    margin:1rem;
   }
 
   .preview.variant-1 .preview-title,
@@ -273,6 +274,7 @@
   .preview.variant-4 .preview-title {
     position: static;
     height: fit-content;
+    margin-bottom: 0.5rem;
   }
 
   .preview.variant-1 .preview-tags,
@@ -281,6 +283,13 @@
   .preview.variant-4 .preview-tags {
     position: static;
     height: fit-content;
+    position: absolute;
+    left: 0.5rem;
+    top: 100%;
+    bottom: 0;
+    writing-mode: horizontal-tb; 
+  transform: rotate(-90deg);  
+  transform-origin: left top;
   }
 
   .preview.variant-1 .preview-desc,
@@ -295,4 +304,17 @@
     height: fit-content;
     margin-bottom: 64px;
   }
+
+  
+.item p {
+  color: #fff;
+  padding: 4px 8px;
+  font-weight: lighter;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 25px;
+  backdrop-filter: blur(20px);
+  transition: 0.3s;
+  font-size: 12px;
+}
 }
