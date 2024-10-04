@@ -35,21 +35,31 @@ const Menu = () => {
 
   useGSAP(
     () => {
-      gsap.set('.menu-link-item-holder', { y: 100 });
+      // Initially position the menu links off-screen to the right
+      gsap.set('.menu-link-item-holder', { x: 100, opacity: 0 });
 
+      // Create a timeline for the menu overlay and menu items
       tl.current = gsap
         .timeline({ paused: true })
+        // Animate the menu overlay from right to left
         .to('.menu-overlay', {
-          duration: 1.25,
-          clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)',
+          duration: 0.6,
+          clipPath: 'polygon(100% 0, 100% 0, 100% 100%, 100% 100%)', // Starts off-screen from the right
           ease: 'power4.inOut',
         })
-        .to('.menu-link-item-holder', {
-          y: 0,
-          duration: 1,
-          stagger: 0.1,
+        .to('.menu-overlay', {
+          duration: 0.6,
+          clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)', // Slides in from the right
           ease: 'power4.inOut',
-          delay: -0.75,
+        })
+        // Stagger the appearance of menu items
+        .to('.menu-link-item-holder', {
+          x: 0, // Move items from right to left
+          opacity: 1,
+          duration: 1,
+          stagger: 0.15,
+          ease: 'power4.inOut',
+          delay: 0.6, // Offset the delay to match the overlay animation
         });
     },
     { scope: container }

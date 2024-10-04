@@ -7,7 +7,7 @@ import IMG2 from '@/assets/images/2009.jpeg';
 import IMG3 from '@/assets/images/2005.png';
 import IMG4 from '@/assets/images/2018_panel.jpg';
 import Lenis from '@studio-freight/lenis';
-
+import PreviewWrapper from '@/components/PreviewWrapper';
 
 export default function Home() {
   useEffect(() => {
@@ -25,8 +25,8 @@ export default function Home() {
 
   return (
     <main className='w-full h-full'>
-    
       <Hero />
+      <PreviewWrapper />
       <Section
         image={IMG}
         title='Funkcamp at Åsafolkhögkola'
