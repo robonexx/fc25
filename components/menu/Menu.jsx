@@ -40,26 +40,26 @@ const Menu = () => {
 
       // Create a timeline for the menu overlay and menu items
       tl.current = gsap
-        .timeline({ paused: true })
+        .timeline({ paused: false })
         // Animate the menu overlay from right to left
         .to('.menu-overlay', {
-          duration: 0.6,
+          duration: 0.3, // Faster animation duration
           clipPath: 'polygon(100% 0, 100% 0, 100% 100%, 100% 100%)', // Starts off-screen from the right
-          ease: 'power4.inOut',
+          ease: 'power2.inOut', // Faster ease
         })
         .to('.menu-overlay', {
-          duration: 0.6,
+          duration: 0.3, // Faster animation duration
           clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0% 100%)', // Slides in from the right
-          ease: 'power4.inOut',
+          ease: 'power2.inOut', // Faster ease
         })
         // Stagger the appearance of menu items
         .to('.menu-link-item-holder', {
           x: 0, // Move items from right to left
           opacity: 1,
-          duration: 1,
-          stagger: 0.15,
-          ease: 'power4.inOut',
-          delay: 0.6, // Offset the delay to match the overlay animation
+          duration: 0.3, // Reduced duration for menu items
+          stagger: 0.08, // Reduced stagger time for quicker item appearance
+          ease: 'power2.inOut',
+          delay: 0.2, // Reduced delay to match the faster overlay animation
         });
     },
     { scope: container }
