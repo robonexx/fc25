@@ -15,44 +15,44 @@ export const previews = [
   {
     img: '/devteam/0.jpg',
     title: 'James "Skeeter Rabbit" Higgins',
-    tags: 'Locking Pioneer',
-    desc: 'James "Skeeter Rabbit" Higgins was an original member of the Go-Go Brothers (1971–1973) and the Original Lockers (1973–1974). Known for his iconic move "The Skeeter Rabbit," he significantly shaped the early locking scene and performed on the influential Frank Sinatra tour in 1974, which helped spread locking globally&#8203;:contentReference[oaicite:0]{index=0}&#8203;:contentReference[oaicite:1]{index=1}.',
+    tags: 'The Gogo Brothers',
+    desc: 'James "Skeeter Rabbit" Higgins was an original member of the Go-Go Brothers (1971–1973) and the Original Lockers (1973–1974). Known for his iconic move "The Skeeter Rabbit," he significantly shaped the early locking scene and performed on the influential Frank Sinatra tour in 1974, which helped spread locking globally',
   },
   {
     img: '/devteam/1.png',
     title: 'Patrik "Prime" Helge',
-    tags: 'Locking Specialist',
+    tags: 'Mass destruction',
     desc: 'Patrik "Prime" Helge is a respected Swedish dancer celebrated for his powerful technique in locking and as a prominent figure in European hip-hop culture. Known for his dedication to teaching, he brings both tradition and innovation to the next generation of dancers.',
   },
   {
     img: '/devteam/2.jpg',
     title: 'Damon Frost',
-    tags: 'Popping Innovator',
+    tags: 'Worldwide inspiration',
     desc: 'Damon Frost has been influential in the European hip-hop, funk popping scenes, he was also an huge inspiration in the locking scene in late 80s early 90s. Based in Sweden, originated from the US, he has a unique style that combines classic funk styles with his creative vision, making him a prominent mentor, performer, and competitor on international stages.',
   },
   {
     img: '/devteam/3.jpg',
     title: 'Arvid "Arvidos" Håkansson',
-    tags: 'World-Class Locker',
+    tags: 'Above the clouds',
     desc: 'Arvid "Arvidos" Håkansson is one of today’s leading lockers, known for his precision and high energy. Mentored by Supreme, he has won major battles, including "Locking Forever" at Summer Dance Forever 2024, marking him as a top figure in the current locking scene.',
   },
   {
     img: '/devteam/4.webp',
     title: 'Willow Evann',
-    tags: 'Creative Locker',
+    tags: 'The Rockets',
     desc: 'Willow Evann is a creative force in locking, known for her fluidity and expressive style. A rising star, she has quickly gained recognition and continues to shape her approach, blending technical skill with artistic flair.',
   },
   {
     img: '/devteam/5.webp',
     title: 'Emanuel "Manne" Schutt',
-    tags: 'Locker and Choreographer',
+    tags: 'Funkademics',
     desc: 'Emanuel "Manne" Schutt, based in Sweden, is celebrated for his creative choreography and dedication to the art of locking. He performs both solo and in groups, consistently pushing stylistic boundaries while honoring locking’s roots.',
   },
   {
     img: '/devteam/6.jpg',
     title: 'Robert "RobOne" Wägar',
-    tags: 'Locking and Hip-Hop Icon',
-    desc: 'Robert "RobOne" Wägar is a versatile dancer known for his influence across both locking and hip-hop dance. His deep understanding of dance culture and adaptability have solidified his position as a key figure in the Scandinavian dance scene.',
+    tags: 'Funkademics / Massdestruction / Gogo Brothers int.',
+    desc: 'Robert "RobOne" Wägar is a versatile dancer known for his influence across both locking and hip-hop dance. His deep understanding of dance culture and adaptability have solidified his position as a key figure in the Swedish dance scene.',
   },
 ];
 
